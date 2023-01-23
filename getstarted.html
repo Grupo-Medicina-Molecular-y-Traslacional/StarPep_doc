@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>StarPep toolbox User Guide - 2&nbsp; Getting Started</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./networks.html" rel="next">
+<link href="./intro.html" rel="prev">
+<link href="./img/StarPep.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">StarPep toolbox User Guide</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep" title="" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+    <a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep_doc" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing StarPep toolbox</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./getstarted.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./networks.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Working with networks</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#main-view" id="toc-main-view" class="nav-link active" data-scroll-target="#main-view"><span class="toc-section-number">2.1</span>  Main view</a></li>
+  <li><a href="#menu-bar" id="toc-menu-bar" class="nav-link" data-scroll-target="#menu-bar"><span class="toc-section-number">2.2</span>  Menu bar</a>
+  <ul class="collapse">
+  <li><a href="#file" id="toc-file" class="nav-link" data-scroll-target="#file"><span class="toc-section-number">2.2.1</span>  File</a></li>
+  <li><a href="#view" id="toc-view" class="nav-link" data-scroll-target="#view"><span class="toc-section-number">2.2.2</span>  View</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools"><span class="toc-section-number">2.2.3</span>  Tools</a></li>
+  <li><a href="#window" id="toc-window" class="nav-link" data-scroll-target="#window"><span class="toc-section-number">2.2.4</span>  Window</a></li>
+  <li><a href="#help" id="toc-help" class="nav-link" data-scroll-target="#help"><span class="toc-section-number">2.2.5</span>  Help</a></li>
+  </ul></li>
+  <li><a href="#quick-access-bar" id="toc-quick-access-bar" class="nav-link" data-scroll-target="#quick-access-bar"><span class="toc-section-number">2.3</span>  Quick access bar</a></li>
+  <li><a href="#tool-panels-an-overview" id="toc-tool-panels-an-overview" class="nav-link" data-scroll-target="#tool-panels-an-overview"><span class="toc-section-number">2.4</span>  Tool panels: an overview</a>
+  <ul class="collapse">
+  <li><a href="#query-panel" id="toc-query-panel" class="nav-link" data-scroll-target="#query-panel"><span class="toc-section-number">2.4.1</span>  Query panel</a></li>
+  <li><a href="#filter-panel" id="toc-filter-panel" class="nav-link" data-scroll-target="#filter-panel"><span class="toc-section-number">2.4.2</span>  Filter panel</a></li>
+  <li><a href="#sequence-search" id="toc-sequence-search" class="nav-link" data-scroll-target="#sequence-search"><span class="toc-section-number">2.4.3</span>  Sequence search</a></li>
+  <li><a href="#molecular-feature-extraction" id="toc-molecular-feature-extraction" class="nav-link" data-scroll-target="#molecular-feature-extraction"><span class="toc-section-number">2.4.4</span>  Molecular feature extraction</a></li>
+  <li><a href="#molecular-feature-selection" id="toc-molecular-feature-selection" class="nav-link" data-scroll-target="#molecular-feature-selection"><span class="toc-section-number">2.4.5</span>  Molecular feature selection</a></li>
+  </ul></li>
+  <li><a href="#center-panels" id="toc-center-panels" class="nav-link" data-scroll-target="#center-panels"><span class="toc-section-number">2.5</span>  Center panels</a>
+  <ul class="collapse">
+  <li><a href="#peptide-sequences-window" id="toc-peptide-sequences-window" class="nav-link" data-scroll-target="#peptide-sequences-window"><span class="toc-section-number">2.5.1</span>  Peptide sequences window</a></li>
+  <li><a href="#networkViz" id="toc-networkViz" class="nav-link" data-scroll-target="#networkViz"><span class="toc-section-number">2.5.2</span>  Network visualization window</a></li>
+  </ul></li>
+  <li><a href="#navigator-panel" id="toc-navigator-panel" class="nav-link" data-scroll-target="#navigator-panel"><span class="toc-section-number">2.6</span>  Navigator panel</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep_doc/edit/main/getstarted.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep_doc/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="main-view" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="main-view"><span class="header-section-number">2.1</span> Main view</h2>
+<div id="fig:C2-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">StartPep toolbox main window</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Menu bar</li>
+<li>Quick access bar</li>
+<li>Tools panel</li>
+<li>Central panel</li>
+<li>Properties panel</li>
+<li>Navigator panel</li>
+<li>Output panel</li>
+</ol>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The above windows panels may be opened from the <code>Window</code> option in the menu bar.</p>
+</div>
+</div>
+</section>
+<section id="menu-bar" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="menu-bar"><span class="header-section-number">2.2</span> Menu bar</h2>
+<section id="file" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="file"><span class="header-section-number">2.2.1</span> File</h3>
+<p>The following options are accessible from the <code>File</code> option:</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Workspaces may be used to work with different data models: one per workspace.</p>
+</div>
+</div>
+<ul>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>New workspace</strong>: Creates a new workspace.</li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Select workspace</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[workspace_name]</strong>: Switches to a new workspace.</li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Copy data to</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>New workspace</strong>: Duplicates data model to a new workspace.</li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Rename current workspace</strong>: Renames the current workspace.</li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Remove workspace</strong>:
+<ul>
+<li><strong>Remove current workspace</strong>: Removes the current workspace.</li>
+<li><strong>Remove other workspaces</strong>: Removes the other workspaces, and only remains the current workspace.</li>
+</ul></li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Clean project</strong>: Removes all workspaces and sets the default workspace with the default data model.</li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Import</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide sequences (FASTA format)</strong>: Imports peptide sequences into a new workspace.</li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Export</strong>: Exports the following data &nbsp;
+<ul>
+<li><strong>Peptide sequences (FASTA format)</strong></li>
+<li><strong>Molecular descriptors (CSV format)</strong></li>
+<li><strong>Networks (GraphML format)</strong></li>
+<li><strong>Metadata relationships (CSV format)</strong></li>
+</ul></li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Exit</strong>: Shutdowns the program</li>
+</ul>
+</section>
+<section id="view" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="view"><span class="header-section-number">2.2.2</span> View</h3>
+<p>The following options are accessible from the <code>View</code> option:</p>
+<ul>
+<li><strong>View</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Toolbars</strong>: Shows/hides a quick access bar.
+<ul>
+<li><strong>File</strong></li>
+<li><strong>Workspace</strong></li>
+<li><strong>Network</strong></li>
+<li><strong>Molecular Descriptors</strong></li>
+</ul></li>
+<li><strong>View</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Full Screen</strong>: Switches to full screen.</li>
+</ul>
+</section>
+<section id="tools" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="tools"><span class="header-section-number">2.2.3</span> Tools</h3>
+<p>The following options are accessible from the <code>Tools</code> option:</p>
+<ul>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide querying</strong>: Opens/selects the query tab in the Tools panel.</li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide search by</strong>: &nbsp;
+<ul>
+<li><strong>Single Query sequence</strong>: Opens/selects the single query tab in the Tools panel.</li>
+<li><strong>Multiple Query sequences</strong>: Opens/selects the multiple query tab in the Tools panel.</li>
+<li><strong>Non-redundant set</strong>: Opens/selects the non-redundant set tab in the Tools panel.</li>
+</ul></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide filtering</strong>: Opens/selects the filter tab in the Tools panel.</li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong>:
+<ul>
+<li><strong>Extraction</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[molecular descriptor option]</strong>: Opens/selects the molecular descriptor tab in the Tools panel.</li>
+<li><strong>Selection</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[unsupervised feature selection]</strong>: Opens/selects the unsupervised feature selection tab in the Tools panel.</li>
+<li><strong>Explorer</strong>: Opens the feature explorer window.</li>
+<li><strong>Removing</strong>: Opens the feature removing window.</li>
+</ul></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Networks</strong>:
+<ul>
+<li><strong>Metadata</strong>: Opens the window to generate a metadata network.</li>
+<li><strong>Similarity Network</strong>: Opens/selects the chemical space tab in the Tools panel.</li>
+<li><strong>Appearance</strong>: Opens/selects the appearance tab in the Tools panel.</li>
+<li><strong>Layout</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[layout algorithm]</strong>: Opens/selects the layout algorithm tab in the Tools panel.</li>
+<li><strong>Clustering</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[clustering algorithm]</strong>: Opens/selects the clustering algorithm tab in the Tools panel.</li>
+<li><strong>Centrality</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[measure]</strong>: Opens/selects the centrality measure tab in the Tools panel.</li>
+<li><strong>Subnetwork mining</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[graph-based algorithm]</strong>: Opens/selects the graph-based algorithm tab in the Tools panel.</li>
+</ul></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Options</strong>: Displays the software configuration window.</li>
+</ul>
+</section>
+<section id="window" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="window"><span class="header-section-number">2.2.4</span> Window</h3>
+<p>The following options are accessible from the <code>Window</code> option:</p>
+<ul>
+<li><strong>Peptide sequences</strong>: Opens/selects the peptide sequences window in the center panel.</li>
+<li><strong>Network visualization</strong>: Opens/selects the network visualization window in the center panel.</li>
+<li><strong>Properties</strong>: Opens/selects the properties panel.</li>
+<li><strong>Navigator</strong>: Opens/selects the navigator panel.</li>
+<li><strong>Output</strong>: Opens/selects the output panel.</li>
+<li><strong>Configure Window</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[options]</strong>: Window settings</li>
+<li><strong>Reset Windows</strong></li>
+<li><strong>Close Window</strong></li>
+<li><strong>Close All Documents</strong></li>
+<li><strong>Close Other Documents</strong></li>
+<li><strong>Documents…</strong>: Opens the Document management window.</li>
+</ul>
+</section>
+<section id="help" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="help"><span class="header-section-number">2.2.5</span> Help</h3>
+<p>The <strong>Help</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>About</strong> ppens the About information window.</p>
+</section>
+</section>
+<section id="quick-access-bar" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="quick-access-bar"><span class="header-section-number">2.3</span> Quick access bar</h2>
+<div id="fig:C2-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Quick access bar.</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These options may be shown/hidden from the menu entry: <code>View</code> <span class="emoji" data-emoji="arrow_right">➡️</span> <code>Toolbars</code> <span class="emoji" data-emoji="arrow_right">➡️</span> <code>[options]</code>.</p>
+</div>
+</div>
+<p>Shortcut to:</p>
+<ol type="1">
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Clean project</strong></li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>New workspace</strong></li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Select workspace</strong></li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Copy data to</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>New workspace</strong></li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Rename current workspace</strong></li>
+<li><strong>File</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Remove workspace</strong></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Extraction</strong></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Selection</strong></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Explorer</strong></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Removing</strong></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Metadata Network</strong></li>
+<li><strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Similarity Network</strong></li>
+</ol>
+</section>
+<section id="tool-panels-an-overview" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="tool-panels-an-overview"><span class="header-section-number">2.4</span> Tool panels: an overview</h2>
+<section id="query-panel" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="query-panel"><span class="header-section-number">2.4.1</span> Query panel</h3>
+<p>This panel may be opened from <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide querying</strong>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The recovered peptides are those linked to the specified metadata nodes.</p>
+</div>
+</div>
+<div id="fig:C2-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Query panel</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Selects the joining condition for the query criteria: <code>Match all (and)</code> or <code>Match all (or)</code>.</li>
+<li>Adds a new term (linked metadata) to the query.</li>
+<li>Edits the query term selected.</li>
+<li>Deletes the query term selected.</li>
+<li>Runs the query.</li>
+<li>List of current query terms.</li>
+<li>Applies the query automatically with each change.</li>
+</ol>
+</section>
+<section id="filter-panel" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="filter-panel"><span class="header-section-number">2.4.2</span> Filter panel</h3>
+<p>This panel may be opened from <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide filtering</strong>.</p>
+<div id="fig:C2-4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Filter panel</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Selects the joining condition for the filter criteria: <code>Match all (and)</code> or <code>Match all (or)</code>.</li>
+<li>Adds a new filter.</li>
+<li>Edits the selected filter.</li>
+<li>Deletes the selected filter.</li>
+<li>Runs the filter.</li>
+<li>List of current filters.</li>
+<li>Applies the filter automatically with each change.</li>
+</ol>
+</section>
+<section id="sequence-search" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="sequence-search"><span class="header-section-number">2.4.3</span> Sequence search</h3>
+<p>This panel can be opened from <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide search by</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[sequence search option]</strong>. For instance, <code>Single query sequence</code>:</p>
+<div id="fig:C2-5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Single query sequence.</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Runs the query.</li>
+<li>Configures the sequence alignment.</li>
+<li>Selects the target sequences.</li>
+<li>Input sequence.</li>
+<li>Resets the query.</li>
+</ol>
+<div id="fig:C2-5a" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-5a.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Sequence alignment settings.</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Returns to the input sequence view.</li>
+<li>Resets the alignment configuration.</li>
+<li>Alignment type (local or global).</li>
+<li>Substitution matrix.</li>
+<li>Percent identity (default: 98%).</li>
+</ol>
+</section>
+<section id="molecular-feature-extraction" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="molecular-feature-extraction"><span class="header-section-number">2.4.4</span> Molecular feature extraction</h3>
+<p>This option is accessible from the menu option <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Extraction</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[molecular descriptor option]</strong>. For instance, <code>All descriptors</code>:</p>
+<div id="fig:C2-6" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Calculating all molecular descriptors.</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Runs the selected molecular descriptor algorithms.</li>
+<li>Selects/Unselect molecular descriptor algorithms.</li>
+</ol>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The calculated molecular descriptors can be removed by accessing the menu options <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Removing</strong>.</p>
+</div>
+</div>
+<p>Besides, calculated molecular features can be displayed in the columns list at the center panel (enabling molecular feature filtering). This option is accessible from the menu option <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Explorer</strong>:</p>
+<div id="fig:C2-6a" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-6a.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Adding molecular features (<em>Boman</em>) to the displayed columns list.</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Adds/Removes molecular descriptors to/from the displayed columns list.</li>
+<li>Visualizes the histogram and data summary (max, min, mean, and standard deviation of molecular feature values.</li>
+</ol>
+</section>
+<section id="molecular-feature-selection" class="level3" data-number="2.4.5">
+<h3 data-number="2.4.5" class="anchored" data-anchor-id="molecular-feature-selection"><span class="header-section-number">2.4.5</span> Molecular feature selection</h3>
+<p>This option is accessible from the menu option <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Molecular features</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Selection</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[unsupervised feature selection]</strong>. For instance, <code>Filtering &amp; subset optimization</code>:</p>
+<div id="fig:C2-7" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">The two-stage unsupervised feature selection</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Runs the two-stage unsupervised feature selection.</li>
+<li>Configures the two-stage unsupervised feature selection.</li>
+</ol>
+</section>
+</section>
+<section id="center-panels" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="center-panels"><span class="header-section-number">2.5</span> Center panels</h2>
+<section id="peptide-sequences-window" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="peptide-sequences-window"><span class="header-section-number">2.5.1</span> Peptide sequences window</h3>
+<p>This window is opened from <strong>Window</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide sequences</strong>. The Peptide sequences window shows the result of applying a query, filter, or search. The rows showed can also be filtered by attributes such as <code>ID</code>, <code>Sequence</code>, <code>Length</code>, or calculated features.</p>
+<div id="fig:C2-8" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Peptide sequences window</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="networkViz" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="networkViz"><span class="header-section-number">2.5.2</span> Network visualization window</h3>
+<p>This window is opened from <strong>Window</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network Visualization</strong>. It consists of two views: <code>Scene</code> and <code>Preview</code>. The <code>Scene</code> view allows to customize some visual properties of the network such as background color, zoom, position, and individual colors for edges and nodes. The options highlighted in Fig. <a href="#fig:C2-9" data-reference-type="ref" data-reference="fig:C2-9">2.11</a> are the following:</p>
+<ol type="1">
+<li>Switch background.</li>
+<li>Zoom options.</li>
+<li>Selector. It allows to change the node diameter of the cursor while selecting nodes.</li>
+<li>Additional options. It allows to enable or disable the options <code>Autoselect neighbors</code> and <code>Show peptide labels</code> (we recommend disabling the latter in order to render clearer graphs in metadata network analysis).</li>
+<li>More advanced sizing and coloring options for nodes. By pressing <code>More.../Less...</code>, the options are shown/hidden.</li>
+<li>Network rendering area.</li>
+<li>Node label options. The first one allows to show/hide the node labels. The second one brings three options to modify node label size: <code>Fixed</code>, <code>Scale size</code>, and <code>Node size</code>. This option <code>Node size</code> is handy for adjusting the label size proportionally to the node size. The third one modify the label color options. There are three choices: <code>Unique</code>, <code>Object</code>, and <code>Text</code>.</li>
+<li>Node label font properties.</li>
+<li>Node label size.</li>
+<li>Two edges options. The first one shows/hides edges. The second one enables edges to have the attached node color.</li>
+<li>Edge thickness.</li>
+<li>Shows/Hides edge labels.</li>
+<li>Edge label font properties.</li>
+<li>Edge label size.</li>
+</ol>
+<div id="fig:C2-9" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Network visualization window: Scene view.</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you right-click the mouse on the scene view, a context menu is displayed.</p>
+</div>
+</div>
+<p>The <code>Preview</code> view shows the rendered the graph according to the calculated layout and all the configurations. Attractive networks may be rendered in this other view. To update the drawing, press the <code>Refresh</code> button.</p>
+<div id="fig:C2-10" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-10.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Network visualization window: Preview view.</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="navigator-panel" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="navigator-panel"><span class="header-section-number">2.6</span> Navigator panel</h2>
+<p>This panel is opened from <strong>Window</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Navigator</strong>. The navigator changes between the <code>Metadata relationships</code> and <code>Graph table</code> options according to whether the <code>Peptide sequences</code> or <code>Network visualization</code> window is active.</p>
+<p>On the one hand, in the <code>Metadata relationships</code> view, the user can seek metadata nodes. Right-click on a row will show a context menu to select or center nodes on the graph, as well as the <code>Properties</code> window for the relationship.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If a peptide sequence is selected in the center panel, only the related metadata are shown in this navigator panel. Click on the <code>Refresh</code> button to show all.</p>
+</div>
+</div>
+<div id="fig:C2-11" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Navigator for the Peptide sequences window</figcaption><p></p>
+</figure>
+</div>
+<p>On the other hand, in the <code>Graph table</code> view, the user can switch the view from nodes table to edges table, and also customize the columns (such as network measures) shown in the data grid. These data tables can be exported to an external text file (CSV format). There is also a context menu that is accessed via right-click on any row.</p>
+<div id="fig:C2-12" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C2-12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Navigator for the Network visualization window</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing StarPep toolbox</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./networks.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Working with networks</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>

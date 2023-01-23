@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>StarPep toolbox User Guide - 3&nbsp; Working with networks</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./getstarted.html" rel="prev">
+<link href="./img/StarPep.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Working with networks</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">StarPep toolbox User Guide</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep" title="" class="sidebar-tool px-1"><i class="bi bi-house-door-fill"></i></a>
+    <a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep_doc" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing StarPep toolbox</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./getstarted.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./networks.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Working with networks</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#metadata-network" id="toc-metadata-network" class="nav-link active" data-scroll-target="#metadata-network"><span class="toc-section-number">3.1</span>  Metadata network</a></li>
+  <li><a href="#similarity-network" id="toc-similarity-network" class="nav-link" data-scroll-target="#similarity-network"><span class="toc-section-number">3.2</span>  Similarity network</a>
+  <ul class="collapse">
+  <li><a href="#sec:cswizard" id="toc-sec:cswizard" class="nav-link" data-scroll-target="#sec\:cswizard"><span class="toc-section-number">3.2.1</span>  Configuration wizard</a></li>
+  </ul></li>
+  <li><a href="#network-model-options" id="toc-network-model-options" class="nav-link" data-scroll-target="#network-model-options"><span class="toc-section-number">3.3</span>  Network model options</a></li>
+  <li><a href="#layout-algorithms" id="toc-layout-algorithms" class="nav-link" data-scroll-target="#layout-algorithms"><span class="toc-section-number">3.4</span>  Layout algorithms</a></li>
+  <li><a href="#sect:appearance" id="toc-sect:appearance" class="nav-link" data-scroll-target="#sect\:appearance"><span class="toc-section-number">3.5</span>  Appearance</a></li>
+  <li><a href="#clustering" id="toc-clustering" class="nav-link" data-scroll-target="#clustering"><span class="toc-section-number">3.6</span>  Clustering</a></li>
+  <li><a href="#centrality" id="toc-centrality" class="nav-link" data-scroll-target="#centrality"><span class="toc-section-number">3.7</span>  Centrality</a></li>
+  <li><a href="#case-study" id="toc-case-study" class="nav-link" data-scroll-target="#case-study"><span class="toc-section-number">3.8</span>  Case study</a>
+  <ul class="collapse">
+  <li><a href="#which-biological-database-holds-peptides-similar-to-the-sequence-of-interest" id="toc-which-biological-database-holds-peptides-similar-to-the-sequence-of-interest" class="nav-link" data-scroll-target="#which-biological-database-holds-peptides-similar-to-the-sequence-of-interest"><span class="toc-section-number">3.8.1</span>  Which biological database holds peptides similar to the sequence of interest?</a></li>
+  <li><a href="#what-are-the-biological-functions-of-peptides-similar-to-the-sequence-of-interest" id="toc-what-are-the-biological-functions-of-peptides-similar-to-the-sequence-of-interest" class="nav-link" data-scroll-target="#what-are-the-biological-functions-of-peptides-similar-to-the-sequence-of-interest"><span class="toc-section-number">3.8.2</span>  What are the biological functions of peptides similar to the sequence of interest?</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep_doc/edit/main/networks.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep_doc/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Working with networks</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="metadata-network" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="metadata-network"><span class="header-section-number">3.1</span> Metadata network</h2>
+<p>The construction of metadata network is accessible from the menu option <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Networks</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Metadata Network</strong>.</p>
+<div id="fig:C3-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Options for metadata network</figcaption><p></p>
+</figure>
+</div>
+<p>In metadata networks, nodes representing metadata are connected to nodes representing peptides by the following relationships:</p>
+<div id="tab:metadata">
+<table class="table">
+<caption>Metadata node names and relationships in starPepDB.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Metadata node</strong></th>
+<th style="text-align: center;"><strong>Relationship</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Origin</td>
+<td style="text-align: center;"><em>produced_by</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Target</td>
+<td style="text-align: center;"><em>assessed_against</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Function</td>
+<td style="text-align: center;"><em>related_to</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Database</td>
+<td style="text-align: center;"><em>compiled_in</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Crossref</td>
+<td style="text-align: center;"><em>linked_to</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Nterminus</td>
+<td style="text-align: center;"><em>modified_by</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">UnusualAA</td>
+<td style="text-align: center;"><em>constituted_by</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cterminus</td>
+<td style="text-align: center;"><em>modified_by</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Subcategory of another node</td>
+<td style="text-align: center;"><em>is_a</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="similarity-network" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="similarity-network"><span class="header-section-number">3.2</span> Similarity network</h2>
+<p>The construction of similarity network is accessible from the menu option <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Networks</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Similarity Network</strong>. To create a similarity network, we first recommended to configure the workflow using the <code>Configuration Wizard</code> and then press the button <code>Run</code>.</p>
+<div id="fig:C3-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Chemical Space window (Nodes tab).</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Runs the workflow for building the similarity network.</li>
+<li>Opens Configuration Wizard (Sect.<a href="#sec:cswizard" data-reference-type="ref" data-reference="sec:cswizard">3.2.1</a>).</li>
+<li>Changes between Nodes and Edges tabs.</li>
+<li>Applies PCA coordinates changes.</li>
+<li>Selects X and Y axis for PCA coordinates.</li>
+<li>PCA results panel.</li>
+</ol>
+<div id="fig:C3-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-3.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Chemical Space window (Edges tab).</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li><strong>Similarity threshold selector:</strong> After changing the value, it is necessary to press <code>Apply</code>.</li>
+<li><strong>Network Density plot:</strong> Helps to decide a similarity threshold.</li>
+</ol>
+<section id="sec:cswizard" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="sec:cswizard"><span class="header-section-number">3.2.1</span> Configuration wizard</h3>
+<p>This section will show the <code>configuration wizard</code> for mapping and visualizing the Chemical Space.</p>
+<section id="wizard-step-1-input-sequences" class="level4" data-number="3.2.1.1">
+<h4 data-number="3.2.1.1" class="anchored" data-anchor-id="wizard-step-1-input-sequences"><span class="header-section-number">3.2.1.1</span> Wizard Step 1: Input sequences</h4>
+<p>To remove redundant sequences, press <code>Yes</code> (<strong>recommended</strong>). Then, you can choose between local or global alignment, multiple substitution matrices, and a identity threshold.</p>
+<div id="fig:C3-4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-4.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Wizard Step 1: Input sequences.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="wizard-step-2-feature-extraction" class="level4" data-number="3.2.1.2">
+<h4 data-number="3.2.1.2" class="anchored" data-anchor-id="wizard-step-2-feature-extraction"><span class="header-section-number">3.2.1.2</span> Wizard Step 2: Feature extraction</h4>
+<p>If you already calculated a set of molecular descriptors, you can select the first option and press <code>Next</code>. If not, select the new descriptors to be calculated.</p>
+<div id="fig:C3-5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Wizard Step 2: Feature extraction</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="wizard-step-3-feature-selection" class="level4" data-number="3.2.1.3">
+<h4 data-number="3.2.1.3" class="anchored" data-anchor-id="wizard-step-3-feature-selection"><span class="header-section-number">3.2.1.3</span> Wizard Step 3: Feature selection</h4>
+<p>If you plan to use all available descriptors, select the first option, and press <code>Next</code>. If not, select and configure the <strong>two-stage unsupervised feature selection</strong> method.</p>
+<div id="fig:C3-6" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-6.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Wizard Step 3: Feature selection.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="wizard-step-4-distance-function." class="level4" data-number="3.2.1.4">
+<h4 data-number="3.2.1.4" class="anchored" data-anchor-id="wizard-step-4-distance-function."><span class="header-section-number">3.2.1.4</span> Wizard Step 4: Distance function.</h4>
+<p>Select the desired <strong>distance function</strong> and the <strong>standardization/normalization</strong> for the calculated descriptors.</p>
+<div id="fig:C3-7" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-7.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Wizard Step 4: Distance function.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="wizard-step-5-network-model" class="level4" data-number="3.2.1.5">
+<h4 data-number="3.2.1.5" class="anchored" data-anchor-id="wizard-step-5-network-model"><span class="header-section-number">3.2.1.5</span> Wizard Step 5: Network model</h4>
+<p>For generating a network model, select between the <strong>Half-Space Proximal Network</strong> or the traditional <strong>Chemical Space Network/Similarity Network</strong> (not recommended for large datasets). For more details, please refer to <a href="https://www.nature.com/articles/s41598-020-75029-1">the methodological paper</a>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The position of nodes may be determined by the first two principal components of descriptor space. However, <strong>layout algorithms</strong> are recommended for a better rearrangement of nodes.</p>
+</div>
+</div>
+<div id="fig:C3-8" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-8.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Wizard Step 5: Network model.</figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="network-model-options" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="network-model-options"><span class="header-section-number">3.3</span> Network model options</h2>
+<p>After creating the network model, the following options are available.</p>
+<div id="fig:C3-8" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-8a.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Network model options.</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Positioning nodes.</li>
+<li>Adding/removing similarity edges.</li>
+<li>Embedding new peptides. When new peptides are projected, a network model will be opened into a new workspace.</li>
+</ol>
+</section>
+<section id="layout-algorithms" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="layout-algorithms"><span class="header-section-number">3.4</span> Layout algorithms</h2>
+<p>A layout algorithm option may be opened from <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Layout</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[layout option]</strong>. The main graph layouts available are <code>Fruchterman Reingold</code>, <code>ForceAtlas 2</code>, <code>Yifan Hu Proportional</code>, and <code>Random Layout</code>. Any layout result could be adjusted using the options <code>Rotate</code>, <code>Contraction</code>, <code>Expansion</code>, <code>Noverlap</code>, and <code>Label Adjust</code>.</p>
+<div id="fig:C3-9" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-9.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">option.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="sect:appearance" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sect:appearance"><span class="header-section-number">3.5</span> Appearance</h2>
+<p>This panel is opened from <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Appearance</strong>.</p>
+<p><img src="img/C3-10.png" id="fig:C3-10" class="img-fluid"></p>
+<ol type="1">
+<li>Runs the appearance customization of either nodes or edges. If the <code>Preview</code> window is active in the <code>Network visualization</code> window, you need to press the button <code>Refresh</code> from mentioned window to update the network view.</li>
+<li>Selects the elements (either <code>Nodes</code> or <code>Edges</code>) whose appearance is to be changed.</li>
+<li>Applies configuration via <code>Unique</code>, <code>Partition</code>, or <code>Ranking</code> functions. For nodes, the calculated measures are available as <code>Partition</code> or <code>Ranking</code> options.</li>
+<li>Modifiable configurations panel. For color options, you need to press and drag the cursor to the desired color, or press right-click to open the color window.</li>
+<li>Changes the color of either <code>Nodes</code> or <code>Edges</code> (if edges are not taking the color of attached nodes, see sect. <a href="getstarted.html#networkViz" data-reference-type="ref" data-reference="networkViz">2.5.2</a>).</li>
+<li>Changes <code>Nodes</code> size (this option only applies to nodes).</li>
+<li>Changes label color of either or <code>Nodes</code> or <code>Edges</code>.</li>
+<li>Changes label size of either or <code>Nodes</code> or <code>Edges</code>.</li>
+<li>Resets current options.</li>
+<li>Resets customization to the default appearance.</li>
+</ol>
+</section>
+<section id="clustering" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="clustering"><span class="header-section-number">3.6</span> Clustering</h2>
+<p>A clustering panel may be opened from <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Clustering</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[clustering algorithm]</strong>. For instance, <code>k-means</code>:</p>
+<div id="fig:C3-11" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-11.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">k-means clustering option.</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After running the clustering algorithm, you may visualize the network structure in <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Appearance</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Nodes</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Partition</strong>.</p>
+</div>
+</div>
+</section>
+<section id="centrality" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="centrality"><span class="header-section-number">3.7</span> Centrality</h2>
+<p>A centrality panel may be opened from <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Centrality</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>[measure option]</strong>. For instance, <code>Betweenness Centrality</code>:</p>
+<div id="fig:C3-12" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-12.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Betweenness Centrality option.</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After running the centrality measure, you may customize the appearance of nodes according to the centrality values in <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Appearance</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Nodes</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Ranking</strong>.</p>
+</div>
+</div>
+</section>
+<section id="case-study" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="case-study"><span class="header-section-number">3.8</span> Case study</h2>
+<p>In this case study, we will try to answer the following questions for a given sequence of interest.</p>
+<pre data-frame="single"><code>&gt;Example sequence
+FLPAIVGAAGQFLPKIFCAISKKC</code></pre>
+<section id="which-biological-database-holds-peptides-similar-to-the-sequence-of-interest" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="which-biological-database-holds-peptides-similar-to-the-sequence-of-interest"><span class="header-section-number">3.8.1</span> Which biological database holds peptides similar to the sequence of interest?</h3>
+<p><strong>Step 1:</strong> Opens the Search panel with the commands <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Peptide search by</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Single query sequence</strong>. Types the query sequence in the input field, configures the sequence alignment at 70% of sequence identity, and press <code>Run</code>. This search should return 25 peptide sequences and 595 metadata relationships.</p>
+<div id="fig:C3-13" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-13.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Sequence search panel</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Step 2:</strong> Creates the metadata network by selecting the option <code>Database</code>.</p>
+<div id="fig:C3-15" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-15.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Options for metadata network</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Step 3:</strong> In the graph table view of <code>Navigator</code> window, select the option <code>Columns...</code>, then mark <code>Degree</code> and click OK.</p>
+<div id="fig:C3-16" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-16.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Display settings</figcaption><p></p>
+</figure>
+</div>
+<p>We can sort the graph table by node Degree by clicking the Degree column 2 times, and now we can observe that the database <strong>SATPdb</strong> contains the most similar sequences to the query sequence.</p>
+<div id="fig:C3-17" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-17.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Graph table</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="what-are-the-biological-functions-of-peptides-similar-to-the-sequence-of-interest" class="level3" data-number="3.8.2">
+<h3 data-number="3.8.2" class="anchored" data-anchor-id="what-are-the-biological-functions-of-peptides-similar-to-the-sequence-of-interest"><span class="header-section-number">3.8.2</span> What are the biological functions of peptides similar to the sequence of interest?</h3>
+<p>Follow the <strong>Step 1</strong> of the previous example.</p>
+<p><strong>Step 2:</strong> Creates the metadata network by selecting the option <code>Function</code>.</p>
+<p><strong>Step 3:</strong> In the graph table view of <code>Navigator</code> window, select the option <code>Columns...</code>, then mark <code>Degree</code> and click OK.</p>
+<div id="fig:C3-18" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-18.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Graph table</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Step 4:</strong> In the <code>Network visualization</code> window, select the following options.</p>
+<div id="fig:C3-19" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-19.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Network visualization</figcaption><p></p>
+</figure>
+</div>
+<ol type="1">
+<li>Shows node labels.</li>
+<li>Disables the option <code>Show peptide labels</code>.</li>
+<li>Modifies the label size to <code>Node size</code>.</li>
+</ol>
+<p>In the <code>Appearance</code> panel (see sect. <a href="#sect:appearance" data-reference-type="ref" data-reference="sect:appearance">3.5</a>), customizes the appearance of nodes for sizing and coloring nodes according to the degree measure.</p>
+<ol type="1">
+<li>In the <code>Nodes</code> view, select <strong>Node size</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Ranking</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Degree</strong>. Set min and max sizes to 5 and 100 respectively, select the interpolator <code>Bezier</code>, select the second predefined spline and press <code>Run</code>.</li>
+<li>In the <code>Nodes</code> view, customizes <strong>Node color</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Ranking</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Degree</strong>, and press <code>Run</code>.</li>
+</ol>
+<p>Run the <strong>Tools</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Network</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Layout</strong> <span class="emoji" data-emoji="arrow_right">➡️</span> <strong>Fruchterman Reingold</strong> about 10s and then press stop. The result may be similar to the following network:</p>
+<div id="fig:C3-20" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="img/C3-20.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Metadata network</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./getstarted.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting Started</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>

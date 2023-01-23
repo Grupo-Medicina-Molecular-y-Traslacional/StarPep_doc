@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "StarPep toolbox User Guide",
+    "section": "",
+    "text": "Welcome to the StarPep toolbox project GitHub repository. Here is where all the components of the project are developed, reviewed, and maintained."
+  },
+  {
+    "objectID": "index.html#about-the-software",
+    "href": "index.html#about-the-software",
+    "title": "StarPep toolbox User Guide",
+    "section": "About the Software",
+    "text": "About the Software\nStarPep toolbox is a software for studying the antimicrobial peptides’ (AMPs) chemical space with molecular network-based representations and similarity searching models. This application aims to contribute to peptide drug repurposing, development, and optimization.\nThis tool was developed as a Java desktop application that integrates the functionalities of several open-source projects. The graphical user interface was built on top of the NetBeans Platform, using the Java SE Runtime Environment 8. The graph database structure was implemented with the Neo4j platform. Some visualization features and the calculation of network properties were based on Gephi. The sequence alignment algorithms were implemented using the BioJava API.\nThe AMPs were collected from a large variety of biological data sources to be organized into an integrated graph database called starPepDB, composed of 45.120 AMPs and their metadata. This integrated graph database is embedded in StarPep toolbox to enable end-user querying, filtering, visualizing, and analyzing the AMPs taking advantage of network-based representations.\nThe main features of StarPep toolbox are listed below:\n\nAMPs’ chemical space filtering: obtain a subset of AMPs from the StarPepDB using their metadata (function, target pathogen, biological origin, chemical modifications, original database, and cross-referenced entries to PDB, PubMed, and UniProt).\nMolecular descriptors: calculate molecular descriptors of the AMPs by applying statistical and aggregation operators on physicochemical amino acid properties (e.g., net charge, isoelectric point, molecular weight, etc.).\nNetwork Science: build different types of networks (metadata, chemical space, and half-space proximal) and calculate global/local properties, centrality metrics, communities, etc.\nSimilarity searching: create multi-query similarity searching models that can lead to the repurposing of AMPs with novel functional activities."
+  },
+  {
+    "objectID": "index.html#the-team",
+    "href": "index.html#the-team",
+    "title": "StarPep toolbox User Guide",
+    "section": "The Team",
+    "text": "The Team\nThis project was developed by members and collaborators of the Grupo de Medicina Molecular y Traslacional (MeM&T) at Universidad San Francisco de Quito, which is lead by Yovani Marrero-Ponce."
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "StarPep toolbox User Guide",
+    "section": "Contributing",
+    "text": "Contributing\nWe encourage your participation as a contributor in this project considering your interest, availability, or skill requirements. Detailed information about ways of collaborating on this project can be found in our contributing guidelines."
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "StarPep toolbox User Guide",
+    "section": "License",
+    "text": "License\n…"
+  },
+  {
+    "objectID": "index.html#get-in-touch",
+    "href": "index.html#get-in-touch",
+    "title": "StarPep toolbox User Guide",
+    "section": "Get in touch",
+    "text": "Get in touch\nIf you want to report a problem or suggest an improvement, you should open an issue at this Github repository, and we can follow your questions or suggestions. But, you can also contact Yovani by emailing ymarrero77@yahoo.es."
+  },
+  {
+    "objectID": "intro.html#hardware-requirements",
+    "href": "intro.html#hardware-requirements",
+    "title": "1  Installing StarPep toolbox",
+    "section": "1.1 Hardware requirements",
+    "text": "1.1 Hardware requirements\n\nMemory (RAM): A minimum of 4 GB is required, but we recommend 8GB or more.\nProcessors: We recommend a multi-core processor due to the fact that the software has been implemented to enable parallel processing of computationally intensive tasks.\nHard Disk: a minimum of 500 MB of free space is required."
+  },
+  {
+    "objectID": "intro.html#software-requirements",
+    "href": "intro.html#software-requirements",
+    "title": "1  Installing StarPep toolbox",
+    "section": "1.2 Software requirements",
+    "text": "1.2 Software requirements\n\nJava SE Runtime Environment 8.\n\n\n\n\n\n\n\nNote\n\n\n\nIt does not work (yet) with versions of Java greater than 8."
+  },
+  {
+    "objectID": "intro.html#issues-with-java-versions",
+    "href": "intro.html#issues-with-java-versions",
+    "title": "1  Installing StarPep toolbox",
+    "section": "1.3 Issues with java versions",
+    "text": "1.3 Issues with java versions\nStarPep toolbox does not yet support any version of Java \\(>\\) 8. The requirement is java 8. If you have multiple Java versions installed on your system, please configure starPep toolbox to run on the supported one (Java 8). Find the etc/starPep.conf file in the installed directory and configure the jdkhome=“/path/to/jdk” accordingly. The symbol “#” at the beginint of the line means that it is commented out, please remove it."
+  },
+  {
+    "objectID": "intro.html#increasing-the-memory-heap-size",
+    "href": "intro.html#increasing-the-memory-heap-size",
+    "title": "1  Installing StarPep toolbox",
+    "section": "1.4 Increasing the memory heap size",
+    "text": "1.4 Increasing the memory heap size\nYou may increase the memory heap further if there is enough RAM available in your system (recommended). First, you have to switch to the directory where the application has been installed or extracted. Open the text file “starpep.conf” located under the etc folder. Once the file has been open, locate the default options setting and change the min/max heapsize values (-J-Xms or -J-Xmx). For instance, to increase the memory heap size from 4G to 8G, enter the value:\ndefault_options=\"--branding starpep -J-Xms24m -J-Xmx8G\"\nThen save the text file etc/starpep.conf and run the application."
+  },
+  {
+    "objectID": "intro.html#running-starpep-toolbox",
+    "href": "intro.html#running-starpep-toolbox",
+    "title": "1  Installing StarPep toolbox",
+    "section": "1.5 Running starPep toolbox",
+    "text": "1.5 Running starPep toolbox\nStarPep toolbox can be initiated by running the bin executable files located in the installed directory, or by clicking the application icon (if installed).\n\n\n\nLoading screen of StartPep toolbox"
+  },
+  {
+    "objectID": "getstarted.html#main-view",
+    "href": "getstarted.html#main-view",
+    "title": "2  Getting Started",
+    "section": "2.1 Main view",
+    "text": "2.1 Main view\n\n\n\nStartPep toolbox main window\n\n\n\nMenu bar\nQuick access bar\nTools panel\nCentral panel\nProperties panel\nNavigator panel\nOutput panel\n\n\n\n\n\n\n\nNote\n\n\n\nThe above windows panels may be opened from the Window option in the menu bar."
+  },
+  {
+    "objectID": "getstarted.html#menu-bar",
+    "href": "getstarted.html#menu-bar",
+    "title": "2  Getting Started",
+    "section": "2.2 Menu bar",
+    "text": "2.2 Menu bar\n\n2.2.1 File\nThe following options are accessible from the File option:\n\n\n\n\n\n\nNote\n\n\n\nWorkspaces may be used to work with different data models: one per workspace.\n\n\n\nFile ➡️ New workspace: Creates a new workspace.\nFile ➡️ Select workspace ➡️ [workspace_name]: Switches to a new workspace.\nFile ➡️ Copy data to ➡️ New workspace: Duplicates data model to a new workspace.\nFile ➡️ Rename current workspace: Renames the current workspace.\nFile ➡️ Remove workspace:\n\nRemove current workspace: Removes the current workspace.\nRemove other workspaces: Removes the other workspaces, and only remains the current workspace.\n\nFile ➡️ Clean project: Removes all workspaces and sets the default workspace with the default data model.\nFile ➡️ Import ➡️ Peptide sequences (FASTA format): Imports peptide sequences into a new workspace.\nFile ➡️ Export: Exports the following data  \n\nPeptide sequences (FASTA format)\nMolecular descriptors (CSV format)\nNetworks (GraphML format)\nMetadata relationships (CSV format)\n\nFile ➡️ Exit: Shutdowns the program\n\n\n\n2.2.2 View\nThe following options are accessible from the View option:\n\nView ➡️ Toolbars: Shows/hides a quick access bar.\n\nFile\nWorkspace\nNetwork\nMolecular Descriptors\n\nView ➡️ Full Screen: Switches to full screen.\n\n\n\n2.2.3 Tools\nThe following options are accessible from the Tools option:\n\nTools ➡️ Peptide querying: Opens/selects the query tab in the Tools panel.\nTools ➡️ Peptide search by:  \n\nSingle Query sequence: Opens/selects the single query tab in the Tools panel.\nMultiple Query sequences: Opens/selects the multiple query tab in the Tools panel.\nNon-redundant set: Opens/selects the non-redundant set tab in the Tools panel.\n\nTools ➡️ Peptide filtering: Opens/selects the filter tab in the Tools panel.\nTools ➡️ Molecular features:\n\nExtraction ➡️ [molecular descriptor option]: Opens/selects the molecular descriptor tab in the Tools panel.\nSelection ➡️ [unsupervised feature selection]: Opens/selects the unsupervised feature selection tab in the Tools panel.\nExplorer: Opens the feature explorer window.\nRemoving: Opens the feature removing window.\n\nTools ➡️ Networks:\n\nMetadata: Opens the window to generate a metadata network.\nSimilarity Network: Opens/selects the chemical space tab in the Tools panel.\nAppearance: Opens/selects the appearance tab in the Tools panel.\nLayout ➡️ [layout algorithm]: Opens/selects the layout algorithm tab in the Tools panel.\nClustering ➡️ [clustering algorithm]: Opens/selects the clustering algorithm tab in the Tools panel.\nCentrality ➡️ [measure]: Opens/selects the centrality measure tab in the Tools panel.\nSubnetwork mining ➡️ [graph-based algorithm]: Opens/selects the graph-based algorithm tab in the Tools panel.\n\nTools ➡️ Options: Displays the software configuration window.\n\n\n\n2.2.4 Window\nThe following options are accessible from the Window option:\n\nPeptide sequences: Opens/selects the peptide sequences window in the center panel.\nNetwork visualization: Opens/selects the network visualization window in the center panel.\nProperties: Opens/selects the properties panel.\nNavigator: Opens/selects the navigator panel.\nOutput: Opens/selects the output panel.\nConfigure Window ➡️ [options]: Window settings\nReset Windows\nClose Window\nClose All Documents\nClose Other Documents\nDocuments…: Opens the Document management window.\n\n\n\n2.2.5 Help\nThe Help ➡️ About ppens the About information window."
+  },
+  {
+    "objectID": "getstarted.html#quick-access-bar",
+    "href": "getstarted.html#quick-access-bar",
+    "title": "2  Getting Started",
+    "section": "2.3 Quick access bar",
+    "text": "2.3 Quick access bar\n\n\n\nQuick access bar.\n\n\n\n\n\n\n\n\nNote\n\n\n\nThese options may be shown/hidden from the menu entry: View ➡️ Toolbars ➡️ [options].\n\n\nShortcut to:\n\nFile ➡️ Clean project\nFile ➡️ New workspace\nFile ➡️ Select workspace\nFile ➡️ Copy data to ➡️ New workspace\nFile ➡️ Rename current workspace\nFile ➡️ Remove workspace\nTools ➡️ Molecular features ➡️ Extraction\nTools ➡️ Molecular features ➡️ Selection\nTools ➡️ Molecular features ➡️ Explorer\nTools ➡️ Molecular features ➡️ Removing\nTools ➡️ Network ➡️ Metadata Network\nTools ➡️ Network ➡️ Similarity Network"
+  },
+  {
+    "objectID": "getstarted.html#tool-panels-an-overview",
+    "href": "getstarted.html#tool-panels-an-overview",
+    "title": "2  Getting Started",
+    "section": "2.4 Tool panels: an overview",
+    "text": "2.4 Tool panels: an overview\n\n2.4.1 Query panel\nThis panel may be opened from Tools ➡️ Peptide querying.\n\n\n\n\n\n\nNote\n\n\n\nThe recovered peptides are those linked to the specified metadata nodes.\n\n\n\n\n\nQuery panel\n\n\n\nSelects the joining condition for the query criteria: Match all (and) or Match all (or).\nAdds a new term (linked metadata) to the query.\nEdits the query term selected.\nDeletes the query term selected.\nRuns the query.\nList of current query terms.\nApplies the query automatically with each change.\n\n\n\n2.4.2 Filter panel\nThis panel may be opened from Tools ➡️ Peptide filtering.\n\n\n\nFilter panel\n\n\n\nSelects the joining condition for the filter criteria: Match all (and) or Match all (or).\nAdds a new filter.\nEdits the selected filter.\nDeletes the selected filter.\nRuns the filter.\nList of current filters.\nApplies the filter automatically with each change.\n\n\n\n2.4.3 Sequence search\nThis panel can be opened from Tools ➡️ Peptide search by ➡️ [sequence search option]. For instance, Single query sequence:\n\n\n\nSingle query sequence.\n\n\n\nRuns the query.\nConfigures the sequence alignment.\nSelects the target sequences.\nInput sequence.\nResets the query.\n\n\n\n\nSequence alignment settings.\n\n\n\nReturns to the input sequence view.\nResets the alignment configuration.\nAlignment type (local or global).\nSubstitution matrix.\nPercent identity (default: 98%).\n\n\n\n2.4.4 Molecular feature extraction\nThis option is accessible from the menu option Tools ➡️ Molecular features ➡️ Extraction ➡️ [molecular descriptor option]. For instance, All descriptors:\n\n\n\nCalculating all molecular descriptors.\n\n\n\nRuns the selected molecular descriptor algorithms.\nSelects/Unselect molecular descriptor algorithms.\n\n\n\n\n\n\n\nNote\n\n\n\nThe calculated molecular descriptors can be removed by accessing the menu options Tools ➡️ Molecular features ➡️ Removing.\n\n\nBesides, calculated molecular features can be displayed in the columns list at the center panel (enabling molecular feature filtering). This option is accessible from the menu option Tools ➡️ Molecular features ➡️ Explorer:\n\n\n\nAdding molecular features (Boman) to the displayed columns list.\n\n\n\nAdds/Removes molecular descriptors to/from the displayed columns list.\nVisualizes the histogram and data summary (max, min, mean, and standard deviation of molecular feature values.\n\n\n\n2.4.5 Molecular feature selection\nThis option is accessible from the menu option Tools ➡️ Molecular features ➡️ Selection ➡️ [unsupervised feature selection]. For instance, Filtering & subset optimization:\n\n\n\nThe two-stage unsupervised feature selection\n\n\n\nRuns the two-stage unsupervised feature selection.\nConfigures the two-stage unsupervised feature selection."
+  },
+  {
+    "objectID": "getstarted.html#center-panels",
+    "href": "getstarted.html#center-panels",
+    "title": "2  Getting Started",
+    "section": "2.5 Center panels",
+    "text": "2.5 Center panels\n\n2.5.1 Peptide sequences window\nThis window is opened from Window ➡️ Peptide sequences. The Peptide sequences window shows the result of applying a query, filter, or search. The rows showed can also be filtered by attributes such as ID, Sequence, Length, or calculated features.\n\n\n\nPeptide sequences window\n\n\n\n\n2.5.2 Network visualization window\nThis window is opened from Window ➡️ Network Visualization. It consists of two views: Scene and Preview. The Scene view allows to customize some visual properties of the network such as background color, zoom, position, and individual colors for edges and nodes. The options highlighted in Fig. 2.11 are the following:\n\nSwitch background.\nZoom options.\nSelector. It allows to change the node diameter of the cursor while selecting nodes.\nAdditional options. It allows to enable or disable the options Autoselect neighbors and Show peptide labels (we recommend disabling the latter in order to render clearer graphs in metadata network analysis).\nMore advanced sizing and coloring options for nodes. By pressing More.../Less..., the options are shown/hidden.\nNetwork rendering area.\nNode label options. The first one allows to show/hide the node labels. The second one brings three options to modify node label size: Fixed, Scale size, and Node size. This option Node size is handy for adjusting the label size proportionally to the node size. The third one modify the label color options. There are three choices: Unique, Object, and Text.\nNode label font properties.\nNode label size.\nTwo edges options. The first one shows/hides edges. The second one enables edges to have the attached node color.\nEdge thickness.\nShows/Hides edge labels.\nEdge label font properties.\nEdge label size.\n\n\n\n\nNetwork visualization window: Scene view.\n\n\n\n\n\n\n\n\nNote\n\n\n\nWhen you right-click the mouse on the scene view, a context menu is displayed.\n\n\nThe Preview view shows the rendered the graph according to the calculated layout and all the configurations. Attractive networks may be rendered in this other view. To update the drawing, press the Refresh button.\n\n\n\nNetwork visualization window: Preview view."
+  },
+  {
+    "objectID": "getstarted.html#navigator-panel",
+    "href": "getstarted.html#navigator-panel",
+    "title": "2  Getting Started",
+    "section": "2.6 Navigator panel",
+    "text": "2.6 Navigator panel\nThis panel is opened from Window ➡️ Navigator. The navigator changes between the Metadata relationships and Graph table options according to whether the Peptide sequences or Network visualization window is active.\nOn the one hand, in the Metadata relationships view, the user can seek metadata nodes. Right-click on a row will show a context menu to select or center nodes on the graph, as well as the Properties window for the relationship.\n\n\n\n\n\n\nNote\n\n\n\nIf a peptide sequence is selected in the center panel, only the related metadata are shown in this navigator panel. Click on the Refresh button to show all.\n\n\n\n\n\nNavigator for the Peptide sequences window\n\n\nOn the other hand, in the Graph table view, the user can switch the view from nodes table to edges table, and also customize the columns (such as network measures) shown in the data grid. These data tables can be exported to an external text file (CSV format). There is also a context menu that is accessed via right-click on any row.\n\n\n\nNavigator for the Network visualization window"
+  },
+  {
+    "objectID": "networks.html#metadata-network",
+    "href": "networks.html#metadata-network",
+    "title": "3  Working with networks",
+    "section": "3.1 Metadata network",
+    "text": "3.1 Metadata network\nThe construction of metadata network is accessible from the menu option Tools ➡️ Networks ➡️ Metadata Network.\n\n\n\nOptions for metadata network\n\n\nIn metadata networks, nodes representing metadata are connected to nodes representing peptides by the following relationships:\n\n\nMetadata node names and relationships in starPepDB.\n\n\nMetadata node\nRelationship\n\n\n\n\nOrigin\nproduced_by\n\n\nTarget\nassessed_against\n\n\nFunction\nrelated_to\n\n\nDatabase\ncompiled_in\n\n\nCrossref\nlinked_to\n\n\nNterminus\nmodified_by\n\n\nUnusualAA\nconstituted_by\n\n\nCterminus\nmodified_by\n\n\nSubcategory of another node\nis_a"
+  },
+  {
+    "objectID": "networks.html#similarity-network",
+    "href": "networks.html#similarity-network",
+    "title": "3  Working with networks",
+    "section": "3.2 Similarity network",
+    "text": "3.2 Similarity network\nThe construction of similarity network is accessible from the menu option Tools ➡️ Networks ➡️ Similarity Network. To create a similarity network, we first recommended to configure the workflow using the Configuration Wizard and then press the button Run.\n\n\n\nChemical Space window (Nodes tab).\n\n\n\nRuns the workflow for building the similarity network.\nOpens Configuration Wizard (Sect.3.2.1).\nChanges between Nodes and Edges tabs.\nApplies PCA coordinates changes.\nSelects X and Y axis for PCA coordinates.\nPCA results panel.\n\n\n\n\nChemical Space window (Edges tab).\n\n\n\nSimilarity threshold selector: After changing the value, it is necessary to press Apply.\nNetwork Density plot: Helps to decide a similarity threshold.\n\n\n3.2.1 Configuration wizard\nThis section will show the configuration wizard for mapping and visualizing the Chemical Space.\n\n3.2.1.1 Wizard Step 1: Input sequences\nTo remove redundant sequences, press Yes (recommended). Then, you can choose between local or global alignment, multiple substitution matrices, and a identity threshold.\n\n\n\nWizard Step 1: Input sequences.\n\n\n\n\n3.2.1.2 Wizard Step 2: Feature extraction\nIf you already calculated a set of molecular descriptors, you can select the first option and press Next. If not, select the new descriptors to be calculated.\n\n\n\nWizard Step 2: Feature extraction\n\n\n\n\n3.2.1.3 Wizard Step 3: Feature selection\nIf you plan to use all available descriptors, select the first option, and press Next. If not, select and configure the two-stage unsupervised feature selection method.\n\n\n\nWizard Step 3: Feature selection.\n\n\n\n\n3.2.1.4 Wizard Step 4: Distance function.\nSelect the desired distance function and the standardization/normalization for the calculated descriptors.\n\n\n\nWizard Step 4: Distance function.\n\n\n\n\n3.2.1.5 Wizard Step 5: Network model\nFor generating a network model, select between the Half-Space Proximal Network or the traditional Chemical Space Network/Similarity Network (not recommended for large datasets). For more details, please refer to the methodological paper.\n\n\n\n\n\n\nNote\n\n\n\nThe position of nodes may be determined by the first two principal components of descriptor space. However, layout algorithms are recommended for a better rearrangement of nodes.\n\n\n\n\n\nWizard Step 5: Network model."
+  },
+  {
+    "objectID": "networks.html#network-model-options",
+    "href": "networks.html#network-model-options",
+    "title": "3  Working with networks",
+    "section": "3.3 Network model options",
+    "text": "3.3 Network model options\nAfter creating the network model, the following options are available.\n\n\n\nNetwork model options.\n\n\n\nPositioning nodes.\nAdding/removing similarity edges.\nEmbedding new peptides. When new peptides are projected, a network model will be opened into a new workspace."
+  },
+  {
+    "objectID": "networks.html#layout-algorithms",
+    "href": "networks.html#layout-algorithms",
+    "title": "3  Working with networks",
+    "section": "3.4 Layout algorithms",
+    "text": "3.4 Layout algorithms\nA layout algorithm option may be opened from Tools ➡️ Network ➡️ Layout ➡️ [layout option]. The main graph layouts available are Fruchterman Reingold, ForceAtlas 2, Yifan Hu Proportional, and Random Layout. Any layout result could be adjusted using the options Rotate, Contraction, Expansion, Noverlap, and Label Adjust.\n\n\n\noption."
+  },
+  {
+    "objectID": "networks.html#sect:appearance",
+    "href": "networks.html#sect:appearance",
+    "title": "3  Working with networks",
+    "section": "3.5 Appearance",
+    "text": "3.5 Appearance\nThis panel is opened from Tools ➡️ Network ➡️ Appearance.\n\n\nRuns the appearance customization of either nodes or edges. If the Preview window is active in the Network visualization window, you need to press the button Refresh from mentioned window to update the network view.\nSelects the elements (either Nodes or Edges) whose appearance is to be changed.\nApplies configuration via Unique, Partition, or Ranking functions. For nodes, the calculated measures are available as Partition or Ranking options.\nModifiable configurations panel. For color options, you need to press and drag the cursor to the desired color, or press right-click to open the color window.\nChanges the color of either Nodes or Edges (if edges are not taking the color of attached nodes, see sect. 2.5.2).\nChanges Nodes size (this option only applies to nodes).\nChanges label color of either or Nodes or Edges.\nChanges label size of either or Nodes or Edges.\nResets current options.\nResets customization to the default appearance."
+  },
+  {
+    "objectID": "networks.html#clustering",
+    "href": "networks.html#clustering",
+    "title": "3  Working with networks",
+    "section": "3.6 Clustering",
+    "text": "3.6 Clustering\nA clustering panel may be opened from Tools ➡️ Network ➡️ Clustering ➡️ [clustering algorithm]. For instance, k-means:\n\n\n\nk-means clustering option.\n\n\n\n\n\n\n\n\nNote\n\n\n\nAfter running the clustering algorithm, you may visualize the network structure in Tools ➡️ Network ➡️ Appearance ➡️ Nodes ➡️ Partition."
+  },
+  {
+    "objectID": "networks.html#centrality",
+    "href": "networks.html#centrality",
+    "title": "3  Working with networks",
+    "section": "3.7 Centrality",
+    "text": "3.7 Centrality\nA centrality panel may be opened from Tools ➡️ Network ➡️ Centrality ➡️ [measure option]. For instance, Betweenness Centrality:\n\n\n\nBetweenness Centrality option.\n\n\n\n\n\n\n\n\nNote\n\n\n\nAfter running the centrality measure, you may customize the appearance of nodes according to the centrality values in Tools ➡️ Network ➡️ Appearance ➡️ Nodes ➡️ Ranking."
+  },
+  {
+    "objectID": "networks.html#case-study",
+    "href": "networks.html#case-study",
+    "title": "3  Working with networks",
+    "section": "3.8 Case study",
+    "text": "3.8 Case study\nIn this case study, we will try to answer the following questions for a given sequence of interest.\n>Example sequence\nFLPAIVGAAGQFLPKIFCAISKKC\n\n3.8.1 Which biological database holds peptides similar to the sequence of interest?\nStep 1: Opens the Search panel with the commands Tools ➡️ Peptide search by ➡️ Single query sequence. Types the query sequence in the input field, configures the sequence alignment at 70% of sequence identity, and press Run. This search should return 25 peptide sequences and 595 metadata relationships.\n\n\n\nSequence search panel\n\n\nStep 2: Creates the metadata network by selecting the option Database.\n\n\n\nOptions for metadata network\n\n\nStep 3: In the graph table view of Navigator window, select the option Columns..., then mark Degree and click OK.\n\n\n\nDisplay settings\n\n\nWe can sort the graph table by node Degree by clicking the Degree column 2 times, and now we can observe that the database SATPdb contains the most similar sequences to the query sequence.\n\n\n\nGraph table\n\n\n\n\n3.8.2 What are the biological functions of peptides similar to the sequence of interest?\nFollow the Step 1 of the previous example.\nStep 2: Creates the metadata network by selecting the option Function.\nStep 3: In the graph table view of Navigator window, select the option Columns..., then mark Degree and click OK.\n\n\n\nGraph table\n\n\nStep 4: In the Network visualization window, select the following options.\n\n\n\nNetwork visualization\n\n\n\nShows node labels.\nDisables the option Show peptide labels.\nModifies the label size to Node size.\n\nIn the Appearance panel (see sect. 3.5), customizes the appearance of nodes for sizing and coloring nodes according to the degree measure.\n\nIn the Nodes view, select Node size ➡️ Ranking ➡️ Degree. Set min and max sizes to 5 and 100 respectively, select the interpolator Bezier, select the second predefined spline and press Run.\nIn the Nodes view, customizes Node color ➡️ Ranking ➡️ Degree, and press Run.\n\nRun the Tools ➡️ Network ➡️ Layout ➡️ Fruchterman Reingold about 10s and then press stop. The result may be similar to the following network:\n\n\n\nMetadata network"
+  }
+]
