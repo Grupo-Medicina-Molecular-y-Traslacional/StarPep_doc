@@ -1,0 +1,257 @@
+---
+from: markdown+emoji
+---
+# Getting Started
+
+## Main view
+![StartPep toolbox main window](img/C2-1.png){#fig:C2-1
+width="\\textwidth"}
+
+1. Menu bar
+2. Quick access bar
+3. Tools panel
+4. Central panel
+5. Properties panel
+6. Navigator panel
+7. Output panel
+
+:::{.callout-note}
+The above windows panels may be opened from the `Window` option in the menu bar.
+:::
+
+## Menu bar
+### File
+The following options are accessible from the `File` option:
+
+:::{.callout-note}
+Workspaces may be used to work with different data models: one per workspace.
+:::
+
+- **File** :arrow_right: **New workspace**: Creates a new workspace.
+- **File** :arrow_right: **Select workspace** :arrow_right: **[workspace_name]**: Switches to a new workspace.
+- **File** :arrow_right: **Copy data to** :arrow_right: **New workspace**: Duplicates data model to a new workspace.
+- **File** :arrow_right: **Rename current workspace**: Renames the current workspace.
+- **File** :arrow_right: **Remove workspace**:
+    - **Remove current workspace**: Removes the current workspace.
+    - **Remove other workspaces**: Removes the other workspaces, and only remains the current workspace.
+- **File** :arrow_right: **Clean project**: Removes all workspaces and sets the default workspace with the default data model.
+- **File** :arrow_right: **Import** :arrow_right: **Peptide sequences (FASTA format)**: Imports peptide sequences into a new workspace.
+- **File** :arrow_right: **Export**: Exports the following data  
+    - **Peptide sequences (FASTA format)**
+    - **Molecular descriptors (CSV format)**
+    - **Networks (GraphML format)**
+    - **Metadata relationships (CSV format)**
+- **File** :arrow_right: **Exit**: Shutdowns the program
+
+### View
+The following options are accessible from the `View` option:
+
+- **View** :arrow_right: **Toolbars**: Shows/hides a quick access bar.
+    - **File**
+    - **Workspace**
+    - **Network**
+    - **Molecular Descriptors**
+- **View** :arrow_right: **Full Screen**: Switches to full screen.
+
+### Tools
+The following options are accessible from the `Tools` option:
+
+- **Tools** :arrow_right: **Peptide querying**: Opens/selects the query tab in the Tools panel.
+- **Tools** :arrow_right: **Peptide search by**:  
+    - **Single Query sequence**: Opens/selects the single query tab in the Tools panel.
+    - **Multiple Query sequences**: Opens/selects the multiple query tab in the Tools panel.
+    - **Non-redundant set**: Opens/selects the non-redundant set tab in the Tools panel.
+- **Tools** :arrow_right: **Peptide filtering**: Opens/selects the filter tab in the Tools panel.
+- **Tools** :arrow_right: **Molecular features**:
+    - **Extraction** :arrow_right: **[molecular descriptor option]**: Opens/selects the molecular descriptor tab in the Tools panel.
+    - **Selection** :arrow_right: **[unsupervised feature selection]**: Opens/selects the unsupervised feature selection tab in the Tools panel.
+    - **Explorer**: Opens the feature explorer window.
+    - **Removing**: Opens the feature removing window.
+- **Tools** :arrow_right: **Networks**:
+    - **Metadata**: Opens the window to generate a metadata network.
+    - **Similarity Network**: Opens/selects the chemical space tab in the Tools panel.
+    - **Appearance**: Opens/selects the appearance tab in the Tools panel.
+    - **Layout** :arrow_right: **[layout algorithm]**: Opens/selects the layout algorithm tab in the Tools panel.
+    - **Clustering** :arrow_right: **[clustering algorithm]**: Opens/selects the clustering algorithm tab in the Tools panel.
+    - **Centrality** :arrow_right: **[measure]**: Opens/selects the centrality measure tab in the Tools panel.
+    - **Subnetwork mining** :arrow_right: **[graph-based algorithm]**: Opens/selects the graph-based algorithm tab in the Tools panel.
+- **Tools** :arrow_right: **Options**: Displays the software configuration window.
+
+### Window
+The following options are accessible from the `Window` option:
+
+- **Peptide sequences**: Opens/selects the peptide sequences window in the center panel.
+- **Network visualization**: Opens/selects the network visualization window in the center panel.
+- **Properties**: Opens/selects the properties panel.
+- **Navigator**: Opens/selects the navigator panel.
+- **Output**: Opens/selects the output panel.
+- **Configure Window** :arrow_right: **[options]**: Window settings
+- **Reset Windows**
+- **Close Window**
+- **Close All Documents**
+- **Close Other Documents**
+- **Documents...**: Opens the Document management window.
+
+### Help
+The **Help** :arrow_right: **About** ppens the About information window.
+
+## Quick access bar
+
+![Quick access bar.](img/C2-2.png){#fig:C2-2 width=".7\\textwidth"}
+
+:::{.callout-note}
+These options may be shown/hidden from the menu entry: `View` :arrow_right: `Toolbars` :arrow_right: `[options]`.
+:::
+
+Shortcut to:
+
+1. **File** :arrow_right: **Clean project**
+2. **File** :arrow_right: **New workspace**
+3. **File** :arrow_right: **Select workspace**
+4. **File** :arrow_right: **Copy data to** :arrow_right: **New workspace**
+5. **File** :arrow_right: **Rename current workspace**
+6. **File** :arrow_right: **Remove workspace**
+7. **Tools** :arrow_right: **Molecular features** :arrow_right: **Extraction**
+8. **Tools** :arrow_right: **Molecular features** :arrow_right: **Selection**
+9. **Tools** :arrow_right: **Molecular features** :arrow_right: **Explorer**
+10. **Tools** :arrow_right: **Molecular features** :arrow_right: **Removing**
+11. **Tools** :arrow_right: **Network** :arrow_right: **Metadata Network**
+12. **Tools** :arrow_right: **Network** :arrow_right: **Similarity Network**
+
+## Tool panels: an overview
+### Query panel
+This panel may be opened from **Tools** :arrow_right: **Peptide querying**. 
+
+:::{.callout-note}
+The recovered peptides are those linked to the specified metadata nodes.
+:::
+
+![Query panel](img/C2-3.png){#fig:C2-3 width=".7\\textwidth"}
+
+1.  Selects the joining condition for the query criteria: `Match all (and)` or `Match all (or)`.
+2.  Adds a new term (linked metadata) to the query.
+3.  Edits the query term selected.
+4.  Deletes the query term selected.
+5.  Runs the query.
+6.  List of current query terms.
+7.  Applies the query automatically with each change.
+
+### Filter panel
+This panel may be opened from **Tools** :arrow_right: **Peptide filtering**.
+
+![Filter panel](img/C2-4.png){#fig:C2-4 width=".7\\textwidth"}
+
+1.  Selects the joining condition for the filter criteria: `Match all (and)` or `Match all (or)`.
+2.  Adds a new filter.
+3.  Edits the selected filter.
+4.  Deletes the selected filter.
+5.  Runs the filter.
+6.  List of current filters.
+7.  Applies the filter automatically with each change.
+
+### Sequence search
+This panel can be opened from **Tools** :arrow_right: **Peptide search by** :arrow_right: **[sequence search option]**. For instance, `Single query sequence`:
+
+![Single query sequence.](img/C2-5.png){#fig:C2-5 width=".7\\textwidth"}
+
+1.  Runs the query.
+2.  Configures the sequence alignment.
+3.  Selects the target sequences.
+4.  Input sequence.
+5.  Resets the query.
+
+![Sequence alignment settings.](img/C2-5a.png){#fig:C2-5a
+width=".7\\textwidth"}
+
+1.  Returns to the input sequence view.
+2.  Resets the alignment configuration.
+3.  Alignment type (local or global).
+4.  Substitution matrix.
+5.  Percent identity (default: 98%).
+
+### Molecular feature extraction
+This option is accessible from the menu option **Tools** :arrow_right: **Molecular features** :arrow_right: **Extraction** :arrow_right: **[molecular descriptor option]**. For instance, `All descriptors`:
+
+![Calculating all molecular descriptors.](img/C2-6.png){#fig:C2-6
+width=".7\\textwidth"}
+
+1.  Runs the selected molecular descriptor algorithms.
+2.  Selects/Unselect molecular descriptor algorithms.
+
+:::{.callout-note}
+The calculated molecular descriptors can be removed by
+accessing the menu options **Tools** :arrow_right: **Molecular features** :arrow_right: **Removing**.
+:::
+
+Besides, calculated molecular features can be displayed in the columns
+list at the center panel (enabling molecular feature filtering). This
+option is accessible from the menu option **Tools** :arrow_right: **Molecular features** :arrow_right: **Explorer**:
+
+![Adding molecular features (*Boman*) to the displayed columns
+list.](img/C2-6a.png){#fig:C2-6a width=".7\\textwidth"}
+
+1.  Adds/Removes molecular descriptors to/from the displayed columns list.
+2.  Visualizes the histogram and data summary (max, min, mean, and standard deviation of molecular feature values.
+
+### Molecular feature selection
+This option is accessible from the menu option **Tools** :arrow_right: **Molecular features** :arrow_right: **Selection** :arrow_right: **[unsupervised feature selection]**. For instance, `Filtering & subset optimization`:
+
+![The two-stage unsupervised feature selection](img/C2-7.png){#fig:C2-7
+width=".7\\textwidth"}
+
+1.  Runs the two-stage unsupervised feature selection.
+2.  Configures the two-stage unsupervised feature selection.
+
+## Center panels
+### Peptide sequences window
+
+This window is opened from **Window** :arrow_right: **Peptide sequences**. The Peptide sequences window shows the result of applying a query, filter, or search. The rows showed can also be filtered by attributes such as `ID`, `Sequence`, `Length`, or calculated features.
+
+![Peptide sequences window](img/C2-8.png){#fig:C2-8 width=".8\\textwidth"}
+
+### Network visualization window {#networkViz}
+This window is opened from **Window** :arrow_right: **Network Visualization**. It consists of two views: `Scene` and `Preview`. The `Scene` view allows to customize some visual properties of the network such as background color, zoom, position, and individual colors for edges and nodes. The options highlighted in Fig. [2.11](#fig:C2-9){reference-type="ref" reference="fig:C2-9"} are the following:
+
+1. Switch background.
+2. Zoom options.
+3. Selector. It allows to change the node diameter of the cursor while selecting nodes.
+4. Additional options. It allows to enable or disable the options `Autoselect neighbors` and `Show peptide labels` (we recommend disabling the latter in order to render clearer graphs in metadata network analysis).
+5. More advanced sizing and coloring options for nodes. By pressing `More.../Less...`, the options are shown/hidden.
+6. Network rendering area.
+7. Node label options. The first one allows to show/hide the node labels. The second one brings three options to modify node label size: `Fixed`, `Scale size`, and `Node size`. This option `Node size` is handy for adjusting the label size proportionally to the node size. The third one modify the label color options. There are three choices: `Unique`, `Object`, and `Text`.
+8. Node label font properties.
+9. Node label size.
+10. Two edges options. The first one shows/hides edges. The second one enables edges to have the attached node color.
+11. Edge thickness.
+12. Shows/Hides edge labels.
+13. Edge label font properties.
+14. Edge label size.
+
+![Network visualization window: Scene view.](img/C2-9.png){#fig:C2-9
+width=".8\\textwidth"}
+
+:::{.callout-note}
+When you right-click the mouse on the scene view, a context menu is displayed.
+:::
+
+The `Preview` view shows the rendered the graph according to the calculated layout and all the configurations. Attractive networks may be rendered in this other view. To update the drawing, press the `Refresh` button.
+
+![Network visualization window: Preview view.](img/C2-10.png){#fig:C2-10
+width=".7\\textwidth"}
+
+## Navigator panel
+This panel is opened from **Window** :arrow_right: **Navigator**. The navigator changes between the `Metadata relationships` and `Graph table` options according to whether the `Peptide sequences` or `Network visualization` window is active.
+
+On the one hand, in the `Metadata relationships` view, the user can seek metadata nodes. Right-click on a row will show a context menu to select or center nodes on the graph, as well as the `Properties` window for the relationship.
+
+:::{.callout-note}
+If a peptide sequence is selected in the center panel, only the related metadata are shown in this navigator panel. Click on the `Refresh` button to show all.
+:::
+
+![Navigator for the Peptide sequences window](img/C2-11.png){#fig:C2-11
+width=".7\\textwidth"}
+
+On the other hand, in the `Graph table` view, the user can switch the view from nodes table to edges table, and also customize the columns (such as network measures) shown in the data grid. These data tables can be exported to an external text file (CSV format). There is also a context menu that is accessed via right-click on any row.
+
+![Navigator for the Network visualization
+window](img/C2-12.png){#fig:C2-12 width=".7\\textwidth"}

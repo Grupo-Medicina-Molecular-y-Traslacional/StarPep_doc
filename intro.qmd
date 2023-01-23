@@ -1,0 +1,35 @@
+# Installing StarPep toolbox
+The binary executable files for Windows, Mac, and Linux are available in this [link](http://mobiosd-hub.com/starpep/). You can download the zip distribution and extract it to a folder or use an installer for the application.
+
+## Hardware requirements
+- **Memory (RAM):** A minimum of 4 GB is required, but we recommend 8GB or more.
+- **Processors:** We recommend a multi-core processor due to the fact that the software has been implemented to enable parallel processing of computationally intensive tasks.
+- **Hard Disk:** a minimum of 500 MB of free space is required.
+
+## Software requirements 
+- Java SE Runtime Environment 8.
+
+:::{.callout-note}
+It does not work (yet) with versions of Java greater than 8.
+:::
+
+## Issues with java versions
+StarPep toolbox **does not yet support** any version of Java $>$ 8. **The requirement is java 8**. If you have multiple Java versions installed on your system, please configure starPep toolbox to run on the supported one (Java 8). Find the `etc/starPep.conf` file in the installed directory and configure
+the `jdkhome=“/path/to/jdk”` accordingly. The symbol “\#” at the beginint of the line means that it is commented out, please remove it.
+
+## Increasing the memory heap size
+You may increase the memory heap further if there is enough RAM available in your system (**recommended**). First, you have to switch to the directory where the application has been installed or extracted. Open the text file “starpep.conf” located under the etc folder. Once the file has been open, locate the default options setting and change the min/max heapsize values (-J-Xms or -J-Xmx). For instance, to increase the memory heap size from 4G to 8G, enter the value:
+
+```bash
+default_options="--branding starpep -J-Xms24m -J-Xmx8G"
+```
+
+Then save the text file `etc/starpep.conf` and run the application.
+
+## Running starPep toolbox
+StarPep toolbox can be initiated by running the *bin* executable files
+located in the installed directory, or by clicking the application icon
+(if installed).
+
+![Loading screen of StartPep toolbox](img/C1-1.png){#fig:C1-1
+width=".4\\textwidth"}

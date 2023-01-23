@@ -1,0 +1,36 @@
+project:
+  type: book
+
+execute:
+  freeze: auto
+book:
+  title: "StarPep toolbox User Guide"
+  author: "StarPep Developer Team"
+  page-footer:
+      right: |
+        This book was built with <a href="https://quarto.org/">Quarto</a>.
+  sidebar:
+    tools:
+      - icon: house-door-fill
+        href: https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep
+  date: "1/22/2023"
+  cover-image: img/cover.png
+  favicon: img/StarPep.ico
+  reader-mode: true
+  #site-url: https://r4ds.hadley.nz/
+  repo-url: https://github.com/Grupo-Medicina-Molecular-y-Traslacional/StarPep_doc
+  repo-branch: main
+  repo-actions: [edit, issue]
+  chapters: 
+    - index.qmd
+    - intro.qmd
+    - getstarted.qmd
+    - networks.qmd
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
